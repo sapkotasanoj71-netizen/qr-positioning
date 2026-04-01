@@ -1,0 +1,59 @@
+:root {
+    --theme: #280; /* CSS variable */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Arial";
+    color: var(--theme);
+}
+
+#map {
+    width: 100%;
+}
+
+#marker {
+    width: 3vw; /* 3% of the viewport width */
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme); /* does not affect the size */
+    border: 5px solid white; /* affects the size */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+#camera {
+    width: 100%;
+}
+button {
+    background-color: var(--theme); /* use CSS variable */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: all 0.3s ease; /* smooth transition */
+}
+
+/* Hover pseudo-class */
+button:hover {
+    background-color: #3a0; /* different color on hover */
+    transform: scale(1.05); /* slight animation */
+    cursor: pointer; /* pointer cursor */
+}
+
